@@ -19,10 +19,11 @@ facteur de sur-apprentissage. On constate la même chose pour le champs ticket.
 
 ## 2 - Premier modéle de niveau 0
 
+On utilise la validation croisée, car on essaye de compenser le faire de ne pas avoir un gros échantillon pour la
+phase d'apprentissage.
+
 On note que l'on dispose de 342 personnes qui ont survécu contre 549. On peut donc dire que l'échantillon est équilibré,
 on n'a pas classe qui est fortement majoritaire au détriment de l'autre.
-
-// échantillon trop faible
 
 ## 3 - Deuxième modéle
 
@@ -37,7 +38,7 @@ on n'a pas classe qui est fortement majoritaire au détriment de l'autre.
 3) Cela confirme la précédente hypothèse, car on note que l'information ce la troisième classe à une influence
    négativement sur le fait de survivre.
 
-4-
+## Partie 3 - Deuxième modèle
 
 3) On note que l'information sur le sex à une très forte influence. On constate que le fait d'être une femme donne une
    plus grande chance survie contrairement au fait d'être un homme. On note également que grâce à cette nouvelle
@@ -50,4 +51,21 @@ on n'a pas classe qui est fortement majoritaire au détriment de l'autre.
 
 6) Cela confirme l'hypothèse précédente, car on obtient un meilleur score. Cela peut également se vérifier un traçant
    les coefficients de la régression logistique, on note en effect que le fait d'être considéré comme un enfant à une
-   très grande importance dans le fait de survivre ou non. 
+   très grande importance dans le fait de survivre ou non.
+
+## Partie 4 - Troisiéme modéle
+
+## Partie 5 - Selection de variable
+
+    "#1 - brute force\n",
+    "#2 - binariser toute les variables\n",
+    "#3 - On fait comme pour Pclass pour toute les valeurs => One Hot Enconding\n",
+    "#4 - \n",
+
+## Partie 6 - Random Forest
+
+# Partie 7 - Gradient Boosting
+
+On note que l’on obtient un meilleur score avec Gradient Boosting qu’avec Random forest. Random Forest = Constuit tous
+les abres puis répercuté les erreurs Gradient Boosting = arbre un a un => il répercute Cela s’explique que Gradient
+Boosting utilise l’erreur des arbres qui la construit avant pour la répercutér sur ceux qu’il va constuire par la suite.
